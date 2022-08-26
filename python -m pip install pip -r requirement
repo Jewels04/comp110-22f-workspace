@@ -1,0 +1,5 @@
+python -m pip install pip -r requirements.txt --user
+git config --global user.email "jewelsa@ad.unc.edu"
+git config --global user.name "Jewels Fernandez"
+git config --global user.email "jewelsa@ad.unc.edu"
+git config --global user.name "Jewels Fernandez"
