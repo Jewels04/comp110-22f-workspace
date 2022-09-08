@@ -1,4 +1,4 @@
-"""EX01 - Chardle - A cute step toward Wordle"""
+"""EX01 - Chardle - A cute step toward Wordle."""
 
 __author__ = "730598599"
 
@@ -15,26 +15,26 @@ print("Searching for " + chardle_letter + " in " + chardle_word)
 
 if chardle_word[0] == chardle_letter:
     print(chardle_letter + " found at index 0")
-    chardle_count: int = chardle_count + 1
+    chardle_count = chardle_count + 1
 
 if chardle_word[1] == chardle_letter:
     print(chardle_letter + " found at index 1")
-    chardle_count: int = chardle_count + 1
+    chardle_count = chardle_count + 1
 
 if chardle_word[2] == chardle_letter:
     print(chardle_letter + " found at index 2")
-    chardle_count: int = chardle_count + 1
+    chardle_count = chardle_count + 1
 
 if chardle_word[3] == chardle_letter:
     print(chardle_letter + " found at index 3")
-    chardle_count: int = chardle_count + 1
+    chardle_count = chardle_count + 1
 
 if chardle_word[4] == chardle_letter:
     print(chardle_letter + " found at index 4")
-    chardle_count: int = chardle_count + 1
+    chardle_count = chardle_count + 1
 
 if chardle_count == 0:
-    print("No intances of " + chardle_letter + " found in " + chardle_word)
+    print("No instances of " + chardle_letter + " found in " + chardle_word)
 
 if chardle_count == 1:
     print("1 instance of " + chardle_letter + " found in " + chardle_word)
