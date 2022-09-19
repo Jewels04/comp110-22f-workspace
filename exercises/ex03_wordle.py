@@ -2,6 +2,7 @@
 
 __author__ = "730598599"
 
+
 # This defined function searches to see if a specific character is found in a specific string.
 def contains_char(string_searched: str, search: str) -> bool:
     """Generates a bool value that determines if a character is found in a string."""
@@ -15,6 +16,7 @@ def contains_char(string_searched: str, search: str) -> bool:
         else:
             counter += 1
     return False
+
 
 # This function will return a string of emojis based on whether the characters of the "guess" string are in the correct spot, incorrect spot, or not present compared to the "secret" string.
 def emojified(guess: str, secret: str) -> str:
@@ -39,6 +41,7 @@ def emojified(guess: str, secret: str) -> str:
     # Once the loop is completed, the function will return the string of emojis it created.
     return emoji
 
+
 # This defined function establishes that a string must be a certain length in order to be returned.
 def input_guess(word_len: int) -> str:
     """Establishes the length of the word needing to be guessed."""
@@ -46,6 +49,7 @@ def input_guess(word_len: int) -> str:
     while len(user_word) != word_len:
         user_word = input(f"That wasn't {word_len} chars! Try again: ")
     return user_word
+
 
 # This defined function establishes what the secret word is, as well as pulls together the previous functions in order to make a full-fledged game.
 def main() -> None:
@@ -71,6 +75,7 @@ def main() -> None:
         # If the player has played six turns and still has not guessed correctly, a message saying they lost is printed and the function is completed.
         if user_turns > 6:
             print("X/6 - Sorry, try again tomorrow!")
+
 
 # These last lines of code make it so that the "main" function can be played as a module, as well as making it so that it can be imported in other modules.
 if __name__ == "__main__":
