@@ -1,6 +1,6 @@
 """'list' Utility Functions Exercise."""
 
-__author__ = 730598599
+__author__ = "730598599"
 
 
 def all(int_list: list[int], given_int: int) -> bool:
@@ -21,7 +21,7 @@ def max(list: list[int]) -> int:
     """Given a list of ints, the function will return the largest int value in the list."""
     if len(list) == 0:
         raise ValueError("max() arg is an empty List")
-    value: int = 0
+    value: int = list[0]
     count: int = 0
     while count < len(list):
         if value < list[count]:
@@ -36,6 +36,8 @@ def is_equal(list_one: list[int], list_two: list[int]) -> bool:
     equal: bool = False
     if len(list_one) != len(list_two):
         return equal
+    if len(list_one) == 0:
+        return True
     while counting < len(list_one):
         if list_one[counting] == list_two[counting]:
             equal = True
