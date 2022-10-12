@@ -18,7 +18,7 @@ def greet() -> None:
     print(f"Hello {player}, welcome to the battle! It's up to you to defeat the beast! You will each take turns performing actions. \nWhile playing, you can choose to attack, heal, or retreat. If you choose attack, you will have the option to either perform a regular attack or a magic attack. But be careful, while magic attacks are more powerful, they can also backfire and hurt you instead! Good luck!")
 
 
-def fight(player_input: str) -> int:
+def fight(player_input: str) -> list[int]:
     """This function determines what happens if the player chooses to attack."""
     global player
     global points
@@ -50,7 +50,7 @@ def fight(player_input: str) -> int:
     if action == reg_atk:
         beast -= 10
         print(f"{REGULAR_ATTACK} Nice hit {player}! The beast's health is now at {beast}!")
-    return points, beast
+    return [points, beast]
 
 
 def heal(health: int, gain: int) -> int:
@@ -85,7 +85,7 @@ def main() -> None:
     points = 100
     beast = 100
     # The greet function is called to introduce the game.
-    greeting: str = greet()
+    greet()
     # While either the player or beast have health, the game will continue to run.
     while points > 0 and beast > 0:
         # The game will ask the player what action they would like to take.
@@ -95,11 +95,13 @@ def main() -> None:
             action = input("That was not a valid action, please try again. ")
         # If the player chooses to retreat, the game will print a message telling the player bye and the program will end.
         if action == r:
-            print(f"You retreated from the beast. You'll get 'em next time!")
+            print("You retreated from the beast. You'll get 'em next time!")
             return None
         # If the player chooses to attack, the fight function will be called.
         if action == a:
-            points, beast = fight(action)
+            results: list[int] = fight(action)
+            points = results[0]
+            beast = results[1]
         # If the player chooses to heal, the heal function will be called.
         if action == h:
             points == heal(points, randint(0, 100))
