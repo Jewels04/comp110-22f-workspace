@@ -14,6 +14,7 @@ def invert(input: dict[str, str]) -> dict[str, str]:
 
 
 def favorite_color(favs: dict[str, str]) -> str:
+    """Returns the most frequently appearing color."""
     tracker: list[str] = list()
     color: str = ""
     other: dict[str, int] = dict()
@@ -29,6 +30,7 @@ def favorite_color(favs: dict[str, str]) -> str:
     
 
 def count(values: list[str]) -> dict[str, int]:
+    """Counts the number of times a string is present in a list."""
     result: dict[str, int] = dict()
     counter: int = 0
     while counter < len(values):

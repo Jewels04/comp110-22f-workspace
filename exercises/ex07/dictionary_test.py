@@ -23,7 +23,7 @@ def test_invert_empty() -> None:
 
 def test_invert_many_short_strings() -> None:
     """Tests to ensure the function can return an inverted dictionary with one character strings."""
-    xs: dict[str, str] = dict ()
+    xs: dict[str, str] = dict()
     xs["a"] = "z"
     xs["b"] = "y"
     xs["c"] = "x"
@@ -32,7 +32,7 @@ def test_invert_many_short_strings() -> None:
 
 def test_invert_many_long_strings() -> None:
     """Tests to ensure the function can return an inverted dictionary with long strings."""
-    xs: dict[str, str] = dict ()
+    xs: dict[str, str] = dict()
     xs["hello"] = "world"
     xs["computer"] = "science"
     xs["Kris"] = "Jordan"
@@ -41,13 +41,13 @@ def test_invert_many_long_strings() -> None:
 
 def test_favorite_color_empty() -> None:
     """Tests to ensure an empty string is returned if an empty dictionary is given."""
-    xs: dict[str, str] = dict ()
+    xs: dict[str, str] = dict()
     assert favorite_color(xs) == ''
 
 
 def test_favorite_color_most() -> None:
     """Tests to ensure the color that appears most frequently is returned."""
-    xs: dict[str, str] = dict ()
+    xs: dict[str, str] = dict()
     xs["Marc"] = "yellow"
     xs["Ezri"] = "blue"
     xs["Kris"] = "blue"
@@ -56,7 +56,7 @@ def test_favorite_color_most() -> None:
 
 def test_favorite_color_first_most() -> None:
     """Tests to ensure that is there is a tie for most frequent color, the first color that appears is the one printed."""
-    xs: dict[str, str] = dict ()
+    xs: dict[str, str] = dict()
     xs["Marc"] = "yellow"
     xs["Ezri"] = "blue"
     xs["Kris"] = "blue"
