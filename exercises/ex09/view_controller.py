@@ -10,11 +10,13 @@ from time import time_ns
 NS_TO_MS: int = 1000000
 
 
+
 class ViewController:
     """This class is responsible for controlling the simulation and visualizing it."""
     screen: _Screen
     pen: Turtle
     model: Model
+
 
     def __init__(self, model: Model):
         """Initialize the VC."""
@@ -28,10 +30,12 @@ class ViewController:
         self.pen.hideturtle()
         self.pen.speed(0)
 
+
     def start_simulation(self) -> None:
         """Call the first tick of the simulation and begin turtle gfx."""
         self.tick()
         done()
+
 
     def tick(self) -> None:
         """Update the model state and redraw visualization."""
